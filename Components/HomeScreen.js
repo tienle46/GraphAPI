@@ -13,7 +13,7 @@ import Swiper from 'react-native-swiper';
 import ModalItems from './ModalItems';
 import Hyperlink from 'react-native-hyperlink'
 var access_token = 'EAACEdEose0cBAHlVwWV6qNHdnCmhLRN9zbhk7w1UsSZCc8MZCZCvjLqh0JLWTzXyNtAIyrn6WpT5mJAD9lxkGL3ZASVW6XBv33mZCzkgKq9egmi2sVrCjI6F5Xs2MQ97AZABlZATUqgaNjqONiwbZCG9DnJcBOZBkGdgiXUjlRXCV7Vm0By3Wwf5ba5Cof8jDivYZD';
-
+var page_name = 'WeLoveSeoHyerin'
 export default class HomeScreen extends Component {
     constructor(props) {
         super(props);
@@ -44,13 +44,13 @@ export default class HomeScreen extends Component {
     }
 
     componentDidMount() {
-        const nameUrl = `https://graph.facebook.com/v2.12/WeLoveSeoHyerin?access_token=${access_token}`
+        const nameUrl = `https://graph.facebook.com/v2.12/${page_name}?access_token=${access_token}`
         const fetchName = fetch(nameUrl).then(res => res.json()).then(res => {
             this.setState({
                 name: res.name
             })
         })
-        const profileUrl = `https://graph.facebook.com/v2.12/WeLoveSeoHyerin/photos?access_token=${access_token}`
+        const profileUrl = `https://graph.facebook.com/v2.12/${page_name}/photos?access_token=${access_token}`
         const fetchProfile = fetch(profileUrl).then(res => res.json()).then(res => {
                 var profilePicUrl = `https://graph.facebook.com/v2.12/${res.data.map(i => i.id)[0]}?fields=images&access_token=${access_token}`;
                 const fetchProfilePic = fetch(profilePicUrl).then(res => res.json()).then(res => {
@@ -68,7 +68,7 @@ export default class HomeScreen extends Component {
                     })
                 })
             })
-        const fetchPost = fetch('https://graph.facebook.com/v2.12/WeLoveSeoHyerin/posts?limit=10&access_token=' + access_token)
+        const fetchPost = fetch(`https://graph.facebook.com/v2.12/${page_name}/posts?limit=10&access_token=${access_token}`)
         .then((response) => response.json())
         .then((responseJson) => {
             this.setState({
@@ -141,7 +141,7 @@ export default class HomeScreen extends Component {
             isFetching: true
         })
 
-        const fetchPost = fetch(`https://graph.facebook.com/v2.12/WeLoveSeoHyerin/posts?limit=10&access_token=${access_token}&after=${this.state.after}`)
+        const fetchPost = fetch(`https://graph.facebook.com/v2.12/${page_name}/posts?limit=10&access_token=${access_token}&after=${this.state.after}`)
             .then((response) => response.json())
             .then((responseJson) => {
                 this.setState({
