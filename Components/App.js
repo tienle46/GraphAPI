@@ -8,14 +8,13 @@ import {
   ActivityIndicator,
   AppRegistry
 } from 'react-native';
-import HomeScreen from './HomeScreen.js';
+import ContentScreen from './ContentScreen.js';
+import HomeStack from './Route.js'
 
 export default class GraphAPI extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <HomeScreen />
-      </View>
+        <HomeStack />
     );
   }
 }
