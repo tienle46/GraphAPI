@@ -1,0 +1,30 @@
+{
+  "name": "GraphAPI",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest"
+  },
+  "dependencies": {
+    "hyperlink": "^3.0.1",
+    "moment": "^2.22.1",
+    "native-base": "^2.4.2",
+    "react": "16.3.1",
+    "react-moment": "^0.7.0",
+    "react-native": "0.55.2",
+    "react-native-hyperlink": "0.0.12",
+    "react-native-modalbox": "^1.4.2",
+    "react-native-swiper": "^1.5.13",
+    "react-navigation": "^1.5.11"
+  },
+  "devDependencies": {
+    "babel-jest": "22.4.3",
+    "babel-preset-react-native": "4.0.0",
+    "jest": "22.4.3",
+    "react-test-renderer": "16.3.1"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
