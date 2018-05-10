@@ -5,7 +5,7 @@ import {
 import {
     Header, Container, Left, Right, Body, Title, Icon, Item, Input, StyleProvider, Thumbnail
 } from 'native-base'
-const like = require('/Users/tienle/Desktop/GraphAPI/images/like.png');
+const like = require('../images/like.png');
 
 export default class ListViewFooter extends Component {
     render() {

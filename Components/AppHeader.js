@@ -5,9 +5,9 @@ import {
 import {
     Header, Container, Left, Right, Body, Title, Icon, Item, Input, StyleProvider, Thumbnail
 } from 'native-base'
-import getTheme from '/Users/tienle/Desktop/GraphAPI/native-base-theme/components/';
+import getTheme from '../native-base-theme/components'
 import headerStyle from './headerStyle';
-import platform from '/Users/tienle/Desktop/GraphAPI/native-base-theme/variables/platform.js';
+import platform from '../native-base-theme/variables/platform.js';
 
 export default class CustomHeader extends Component {
     render() {
